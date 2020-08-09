@@ -18,7 +18,7 @@ def load_vars(task):
 
 def config_vrf(task):
     vrf_template = task.run(task=template_file, name="Building VRF Configuration", template="vrf.j2",
-                            path="./templates")
+                            path="templates")
     task.host["vrf"] = vrf_template.result
     vrf_output = task.host["vrf"]
     vrf_send = vrf_output.splitlines()
@@ -28,7 +28,7 @@ def config_vrf(task):
 
 def config_dmvpn(task):
     dmvpn_template = task.run(task=template_file, name="Building DMVPN Configuration", template="dmvpn.j2",
-                              path="./templates")
+                              path="templates")
     task.host["dmvpn"] = dmvpn_template.result
     dmvpn_output = task.host["dmvpn"]
     dmvpn_send = dmvpn_output.splitlines()
@@ -38,7 +38,7 @@ def config_dmvpn(task):
 
 def config_bgp(task):
     bgp_template = task.run(task=template_file, name="Building BGP Configuration", template="bgp.j2",
-                            path="./templates")
+                            path="templates")
     task.host["bgp"] = bgp_template.result
     bgp_output = task.host["bgp"]
     bgp_send = bgp_output.splitlines()

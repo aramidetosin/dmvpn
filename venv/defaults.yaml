@@ -3,7 +3,7 @@ username: cisco
 password: cisco
 connection_options:
     netmiko:
-        extras: {"fast_cli": True}
+        extras: {"fast_cli": False}
     scrapli:
         extras:
           ssh_config_file: True
