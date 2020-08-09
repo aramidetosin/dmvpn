@@ -1,0 +1,39 @@
+
+---
+
+HUB-R1:
+    hostname: 192.168.1.250
+    groups:
+        - cisco_group
+    data:
+        domain: dayo
+        dmvpn: yes
+
+
+SPOKE-R2:
+    hostname: 192.168.1.251
+    groups:
+        - cisco_group
+    data:
+        domain: dayo
+        dmvpn: yes
+
+
+
+SPOKE-R3:
+    hostname: 192.168.1.252
+    groups:
+        - cisco_group
+    data:
+        domain: dayo
+        dmvpn: yes
+
+
+
+SPOKE-R4:
+    hostname: 192.168.1.253
+    groups:
+        - cisco_group
+    data:
+        domain: dayo
+        dmvpn: yes
